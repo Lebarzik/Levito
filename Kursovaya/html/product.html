@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/product.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <header class="header"></header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">Levito</a>
+            </div>
+            <nav class="nav-center">
+                <a href="/html/index.html">Главная</a>
+                <a href="/html/product.html">Категории товаров</a>
+                <a href="#">Чаты</a>
+            </nav>
+            <nav class="nav-right">
+                <a href="#">Личный кабинет</a>
+            </nav>
+        </div>
+      </header>
+  
+    <section class="product">
+    <div class="product__gallery">
+        <!-- Основное изображение продукта -->
+        <div class="product__main-image">
+            <img src="/img/0798.png" alt="Главное изображение" id="main-image">
+        </div>
+
+        <!-- Миниатюры -->
+        <div class="product__thumbnails">
+            <img src="/img/0798.png" alt="Продукт 1" class="product__thumbnail" onclick="changeImage(this)">
+            <img src="/img/platie.png" alt="Продукт 2" class="product__thumbnail" onclick="changeImage(this)">
+            <img src="/img/ef8e655cc563da767944bf59f99b36fd.png" alt="Продукт 3" class="product__thumbnail" onclick="changeImage(this)">
+        </div>
+    </div>
+
+    <div class="product__details">
+        <!-- Название продукта -->
+        <h2 class="product__name">Название продукта</h2>
+
+        <!-- Описание продукта -->
+        <p class="product__description">Это краткое описание продукта. Оно включает в себя основные характеристики и преимущества.</p>
+
+        <!-- Цена продукта -->
+        <p class="product__price">Цена: 1200 руб.</p>
+
+        <!-- Кнопки действий -->
+        <div class="product__actions">
+            <button class="product__button product__button--phone">Показать телефон</button>
+            <button class="product__button product__button--buy">Написать</button>
+        </div>
+    </div>
+</section>
+  <script src="/js/product.js"></script>
+</body>
+</html>

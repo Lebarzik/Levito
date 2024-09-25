@@ -48,10 +48,11 @@ body {
     text-decoration: none;
     margin: 0 20px;
     font-size: 18px;
+    transition: all 0.5s;
 }
 
 .nav-center a:hover {
-
+    font-weight: 700;
 }
 
 /* Правосторонние элементы (Вход/Регистрация и Личный кабинет) */
@@ -64,14 +65,15 @@ body {
     text-decoration: none;
     margin-left: 20px;
     font-size: 18px;
+    transition: all 0.5s;
 }
 
 .nav-right a:hover {
-    text-decoration: underline;
+    font-weight: 700;
 }
 
 /* Основной блок */
-.main-content {
+.main-content { 
     text-align: center;
     margin-top: 50px;
 }
@@ -281,6 +283,12 @@ font-weight: 800;
     text-align: start;
     box-shadow: 0 2px 40px rgba(255, 255, 255, 0.123);
     font-family: Roboto, sans-serif;
+    transition: all 0.5s;
+}
+
+.card:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.123);
 }
 
 .card img {
@@ -325,39 +333,43 @@ font-weight: 800;
 }
 
 .why-choose-us {
-    padding: 40px;
-    background-color: #e4e4e4; 
-    text-align: center; 
-    margin: 100px 0;
+    padding: 20px;
+    text-align: center;
 }
 
-.why-choose-us h2{
+.why-choose-us__title {
     font-size: 52px;
     font-weight: 800;
-    color: rgb(34, 34, 34);
+    color: #222222;
+    margin-bottom: 20px;
 }
 
-.why-content {
+.why-choose-us__content {
     display: flex;
-    justify-content: space-between;
-    margin: 20px 300px;
-
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
 }
 
-.left-images, .right-images {
-    display: flex;
-    flex-direction: column;
+.why-choose-us__image {
+    flex-basis: 30%; 
+    max-width: 400px;
 }
 
-.why-image {
-    width: 450px;
+.why-choose-us__image-item {
+    width: 100%;
     height: auto;
-    margin: 10px;
+    transition: all 0.5s;
 }
 
-.center-image {
-    width: 450px; 
-    height: auto; 
+.why-choose-us__image-item:hover {
+    transform: translateY(-10px); 
+}
+
+.why-choose-us__image-item--center {
+    position: relative;
+    z-index: 1;
 }
 
 .testimonial-slider {

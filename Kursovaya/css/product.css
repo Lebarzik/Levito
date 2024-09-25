@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: Raleway, sans-serif;
+    background-color: #e4e4e4;
+    overflow-x: hidden;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 0 20px;
+}
+
+/* Логотип слева */
+.logo a {
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Центровка навигационных ссылок */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav-center a:hover {
+    font-weight: 700;
+}
+
+/* Правосторонние элементы (Вход/Регистрация и Личный кабинет) */
+.nav-right {
+    display: flex;
+}
+
+.nav-right a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav-right a:hover {
+    font-weight: 700;
+}
+
+
+.product {
+  max-width: 1230px;
+  justify-content: center;
+    display: flex;
+    gap: 40px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.product__gallery {
+    width: 50%;
+}
+
+.product__main-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product__thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product__thumbnail {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.product__thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.product__details {
+    width: 40%;
+}
+
+.product__name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product__description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.product__price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product__actions { 
+    display: flex;
+    gap: 20px;
+}
+
+.product__button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.product__button--phone {
+background-color: #f0f0f0;
+padding: 15px 25px;
+ border: unset;
+ color: #222222;
+ z-index: 1;
+ position: relative;
+ font-weight: 700;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.product__button--buy {
+   padding: 15px 25px;
+ border: unset;
+ color: #e4e4e4;
+ z-index: 1;
+ background: #222222;
+ position: relative;
+ font-weight: 700;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+}
+
+.product__button:hover {
+}
