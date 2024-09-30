@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: Raleway, sans-serif;
+    background-color: #e4e4e4;
+    overflow-x: hidden;
+}
+
+/* Шапка сайта */
+.header {
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Логотип слева */
+.logo a {
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Центровка навигационных ссылок */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav-center a:hover {
+    font-weight: 700;
+}
+
+/* Правосторонние элементы (Вход/Регистрация и Личный кабинет) */
+.nav-right {
+    display: flex;
+}
+
+.nav-right a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav-right a:hover {
+    font-weight: 700;
+}
+
+.chat-app {
+    display: flex;
+    height: 100vh;
+}
+
+/* Боковая панель с чатами */
+.chat-sidebar {
+    width: 30%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.chat-sidebar__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.chat-sidebar__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Карточка товара в списке чатов */
+.chat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(238, 238, 238);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.active{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-item__image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.chat-item__details {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.chat-item__name {
+    font-size: 16px;
+}
+
+.chat-item__message-icon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Окно чата */
+.chat-window {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+
+}
+
+.chat-window__header {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-window__title {
+    font-size: 18px;
+}
+
+.chat-window__messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-message--received {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+}
+
+.chat-message--sent {
+    background-color: #e0ffe0;
+    align-self: flex-end;
+}
+
+.chat-window__input {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.chat-window__text-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.chat-window__send-button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
