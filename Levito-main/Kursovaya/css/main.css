@@ -284,6 +284,7 @@ font-weight: 800;
     box-shadow: 0 2px 40px rgba(255, 255, 255, 0.123);
     font-family: Roboto, sans-serif;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 .card:hover{

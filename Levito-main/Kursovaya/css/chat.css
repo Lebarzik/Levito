@@ -75,6 +75,7 @@ body {
 .chat-app {
     display: flex;
     height: 100vh;
+    margin: 20px auto;
 }
 
 /* Боковая панель с чатами */
@@ -84,6 +85,7 @@ body {
     padding: 20px;
     border-right: 1px solid #ddd;
     border-radius: 15px;
+    margin: 0 30px;
 }
 
 .chat-sidebar__title {
@@ -106,6 +108,13 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s;
+}
+
+.chat-item:hover{
+    transform: scale(1.02);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.123);
 }
 
 .active{
@@ -146,14 +155,14 @@ body {
     flex-direction: column;
     background-color: #fff;
     border-radius: 15px;
-
+    margin: 0 30px 0 0;
 }
 
 .chat-window__header {
     padding: 20px;
     border-radius: 15px;
     background-color: #f0f0f0;
-    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .chat-window__title {
@@ -167,14 +176,27 @@ body {
 }
 
 .chat-message {
-    margin-bottom: 10px;
+    display: flex;
+    margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.103);
+}
+
+.chat-message p{
+    margin: auto 0;
+}
+
+.chat-item__image_chat {
+    width: 30px;
+    height: 30px;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
 }
 
 .chat-message--received {
     background-color: #f1f1f1;
-    align-self: flex-start;
+    align-self:center;
 }
 
 .chat-message--sent {
@@ -195,12 +217,121 @@ body {
     border-radius: 15px;
 }
 
-.chat-window__send-button {
-    margin-left: 10px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
+
+.chat-window__text-input {
     border: none;
+    outline: none;
     border-radius: 15px;
-    cursor: pointer;
+    padding: 1em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 400ms ease-in-out;
+  }
+  
+  .chat-window__text-input:focus {
+    background-color: white;
+    transform: scale(1.01);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+  }
+
+  .btn-53,
+.btn-53 *,
+.btn-53 :after,
+.btn-53 :before,
+.btn-53:after,
+.btn-53:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+
+.btn-53 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #e4e4e4;
+  background-image: none;
+  color: #212121;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0 20px;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+
+.btn-53:disabled {
+  cursor: default;
+}
+
+.btn-53:-moz-focusring {
+  outline: auto;
+}
+
+.btn-53 svg {
+  display: block;
+  vertical-align: middle;
+}
+
+.btn-53 [hidden] {
+  display: none;
+}
+
+.btn-53 {
+  border: 1px solid;
+  border-radius: 14px;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.btn-53 .original {
+  background: #212121;
+  color: #e4e4e4;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  transition: transform 0.5s cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.btn-53:hover .original {
+  transform: translateY(100%);
+}
+
+.btn-53 .letters {
+  display: inline-flex;
+}
+
+.btn-53 span {
+  opacity: 0;
+  transform: translateY(-15px);
+  transition: transform 0.2s cubic-bezier(0.87, 0, 0.13, 1), opacity 0.5s;
+}
+
+.btn-53 span:nth-child(2n) {
+  transform: translateY(15px);
+}
+
+.btn-53:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn-53:hover span:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.btn-53:hover span:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.btn-53:hover span:nth-child(4) {
+  transition-delay: 0.4s;
 }
