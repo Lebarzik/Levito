@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	font-family: Raleway, sans-serif;
+    background-color: #e4e4e4;
+    overflow-x: hidden;
+}
+
+/* Шапка сайта */
+.header {
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Логотип слева */
+.logo a {
+    color: rgb(34, 34, 34);
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Центровка навигационных ссылок */
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav-center a:hover {
+    font-weight: 700;
+}
+
+/* Правосторонние элементы (Вход/Регистрация и Личный кабинет) */
+.nav-right {
+    display: flex;
+}
+
+.nav-right a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+.nav-right a:hover {
+    font-weight: 700;
+}
+
+.recommendations {
+    padding: 20px;
+}
+
+.recommendations__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Стили для списка товаров */
+.recommendations__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Стили карточки товара */
+.product-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    width: calc(100% / 6 - 20px); /* 6 карточек по горизонтали */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Картинка товара */
+.product-card__image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.336);
+}
+
+/* Информация о товаре */
+.product-card__info {
+    text-align: center;
+}
+
+.product-card__name {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.product-card__price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.product-card__location {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 1200px) {
+    .product-card {
+        width: calc(100% / 4 - 20px); /* 4 карточки в ряд на экранах до 1200px */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% / 2 - 20px); /* 2 карточки в ряд на экранах до 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* 1 карточка в ряд на экранах до 480px */
+    }
+}

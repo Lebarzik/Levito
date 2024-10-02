@@ -146,7 +146,7 @@ body {
 }
 
 .image-left {
-    width: 300px; /* Установите нужный размер */
+    width: 350px; /* Установите нужный размер */
     position: relative;
     left: 200px;
 }
@@ -160,7 +160,7 @@ body {
 .button-container {
     display: flex;
     justify-content: center;
-    margin: 100px 0;
+    margin: 170px 0;
     gap: 100px;
 }
 
