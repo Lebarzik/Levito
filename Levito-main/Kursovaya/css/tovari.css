@@ -74,32 +74,36 @@ body {
 
 .recommendations {
     padding: 20px;
+    margin: 20px 60px;
 }
 
 .recommendations__title {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 52px;
+    margin-bottom: 60px;
 }
 
 /* Стили для списка товаров */
 .recommendations__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 90px;
+    justify-content: flex-start;
 }
 
 /* Стили карточки товара */
 .product-card {
+    width: calc(100% / 5 - 20px);
     background-color: #fff;
     border-radius: 15px;
-    padding: 15px;
+
     width: calc(100% / 6 - 20px); /* 6 карточек по горизонтали */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Roboto, sans-serif;
+    cursor: pointer;
 }
 
 .product-card:hover {
@@ -116,25 +120,24 @@ body {
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.336);
 }
 
-/* Информация о товаре */
-.product-card__info {
-    text-align: center;
+.card h2 {
+    padding: 15px 15px 10px 15px;
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(255, 208, 0);
+    padding-top: 0px;
+    text-shadow: rgba(255, 204, 0, 0.61) 1px 0 30px;
 }
 
-.product-card__name {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-.product-card__price {
-    font-size: 18px;
+.price {
+    padding: 0 0 0 15px;
     font-weight: bold;
-    margin-bottom: 6px;
 }
 
-.product-card__location {
-    font-size: 14px;
-    color: #666;
+.location {
+    padding: 0 0 15px 15px;
+    color: #777;
+    font-size: 0.9em;
 }
 
 /* Адаптив для маленьких экранов */
